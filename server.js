@@ -100,7 +100,8 @@ app.delete('/postdelete/:id', async (req, res) => {
 app.use(express.json());
 
 
-// Create a connection pool to your MySQL database
+// Create a connection pool to your MySQL database.
+// Create a .env file in the main directory and put in your SQL credentials
 const pool = mysql.createPool({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,

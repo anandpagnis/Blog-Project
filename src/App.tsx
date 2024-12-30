@@ -17,7 +17,6 @@ import WebIcon from '@mui/icons-material/Web';
 // Import page components
 import Posts from "./PostDisp.tsx";
 import YourLetters from "./YourLetters.tsx";
-import SettingsPage from "./SettingsPage.tsx";
 import { Link } from 'react-router-dom';
 import AccountMenu from "./Components/Profile.tsx";
 import CreatePost from "./CreatePost.tsx";
