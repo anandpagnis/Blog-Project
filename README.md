@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# Blog Format Social Network
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a CRUD application designed for a blog-style social network, consisting of easily replicable components for other fullstack apps.
 
-Currently, two official plugins are available:
+The application is built using TypeScript for the frontend and MySQL as the backend database. It leverages Axios for client-server communication and RESTful APIs implemented with Express.js. Security and user management are managed with Auth0.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [MySQL](https://www.mysql.com/)
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/blog-social-network.git
+   cd blog-social-network
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Set up the database:
+   - Create a MySQL database.
+   - Enter your database credentials in the `.env` file:
+     ```
+     DB_HOST=your-database-host
+     DB_USER=your-database-username
+     DB_PASSWORD=your-database-password
+     DB_NAME=your-database-name
+     ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. Start the server:
+   ```bash
+   node server.js
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. Start the development server for the frontend:
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Technologies Used
+- **Frontend**: TypeScript
+- **Backend**: Node.js with Express.js
+- **Database**: MySQL
+- **Client-Server Communication**: Axios
+- **Authentication**: Auth0
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
