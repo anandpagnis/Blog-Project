@@ -140,6 +140,14 @@ function SidebarFooter({mini}: SidebarFooterProps) {
 function CustomAppTitle() {
     return (
         <Stack direction="row" alignItems="center" spacing={2}>
+            <img
+                src={Blogicon}
+                alt="Blog Icon"
+                style={{
+                    width: '32px', // Adjust the size as needed
+                    height: '32px',
+                }}
+            />
             <Typography variant="h6">Blog App</Typography>
         </Stack>
     );
