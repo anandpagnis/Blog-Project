@@ -7,12 +7,12 @@ import {IconButton, Stack, TextField, Tooltip, Typography} from '@mui/material';
 
 
 // Icons
-import CloudCircleIcon from '@mui/icons-material/CloudCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import SearchIcon from '@mui/icons-material/Search';
 import ModeIcon from '@mui/icons-material/Mode';
 import WebIcon from '@mui/icons-material/Web';
+import Blogicon from './assets/blogicon.svg';
 
 // Import page components
 import Posts from "./PostDisp.tsx";
@@ -140,8 +140,7 @@ function SidebarFooter({mini}: SidebarFooterProps) {
 function CustomAppTitle() {
     return (
         <Stack direction="row" alignItems="center" spacing={2}>
-            <CloudCircleIcon fontSize="large" color="primary" />
-            <Typography variant="h6">My App</Typography>
+            <Typography variant="h6">Blog App</Typography>
         </Stack>
     );
 }
